@@ -16,11 +16,10 @@ IpMonitorEngine::IpMonitorEngine(QObject* parent, const QVariantList& args)
 bool IpMonitorEngine::updateSourceEvent(const QString &source)
 {
     QNetworkInterface iface = QNetworkInterface::interfaceFromName(source);
-    if (!iface.isValid() || source=="lo")
+    if (!iface.isValid())
         return false;
     if (source == "lo")
         return true;
-    setData(iface.name(), "Name", iface.humanReadableName());
 
     QString address;
     QList<QNetworkAddressEntry> addrs = iface.addressEntries();
@@ -34,6 +33,7 @@ bool IpMonitorEngine::updateSourceEvent(const QString &source)
     else
         address = "Not available";
 
+    setData(iface.name(), "Name", iface.humanReadableName());
     setData(iface.name(), "Address", address);
     return true;
 }
