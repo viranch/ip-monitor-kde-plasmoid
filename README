@@ -16,7 +16,7 @@ Runtime deps:
 To install the plasmoid, build (and install) by following
 commands:
 
-$ cd ip_monitor/
+$ cd ip-monitor-kde-plasmoid/
 $ cmake .
 $ make
 $ su -c 'make install'
