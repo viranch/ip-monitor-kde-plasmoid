@@ -1,0 +1,32 @@
+This is a KDE plasmoid that simply shows IPv4 addresses
+of all the network interfaces available on the system.
+
+=INSTALL=========
+
+Before you can use the plasmoid, make sure you have following
+dependencies:
+
+Build deps:
+- KDE Development library (either from Git or precompiled package from your distribution)
+- Qt Development library (this is a dependency for above, and hence will mostly be installed automatically)
+
+Runtime deps:
+- KDE Plasma Workspace (to load the plasmoid on!)
+
+To install the plasmoid, build (and install) by following
+commands:
+
+$ cd ip_monitor/
+$ cmake .
+$ make
+$ su -c 'make install'
+$ kbuildsycoca4
+
+If there were no errors during build, the plasmoid should be
+ready to use and can be loaded from KDE Plasma Workspace as usual.
+
+=AUTHOR=========
+
+Name: Viranch Mehta
+Email: viranch.mehta@gmail.com
+
