@@ -17,8 +17,8 @@ To install the plasmoid, build (and install) by following
 commands:
 
 $ cd ip-monitor-kde-plasmoid/
-$ cmake .
-$ make
+$ mkdir build && cd build
+$ cmake -DCMAKE_INSTALL_PREFIX=/usr .. && make
 $ su -c 'make install'
 $ kbuildsycoca4
 
